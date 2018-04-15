@@ -1,0 +1,201 @@
+body{
+  background-color: #02010a;
+  font-family: "Dancing Script", Helvetica, "Time New Roman";
+}
+
+#contenido{
+  width: 900px;
+  margin: auto;
+}
+
+#cabecera{
+  background-color: #5b7989;
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  padding: 1%;
+  margin: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  animation-name: presentacion;
+	animation-duration: 1.5s
+}
+
+#cabecera > h1,
+#cabecera > nav{
+  width: 50%;
+}
+
+#cabecera > h1{
+  color: white;
+  text-shadow: 2px 2px #02010a;
+}
+
+#menu {
+	text-align: right;
+	padding: 0;
+	margin: 0;
+}
+#menu ul
+{
+	list-style-type: none;
+}
+
+#menu li
+{
+	display: inline;
+  margin: 0 10px 0 0;
+}
+
+#menu li a
+{
+   padding: 2px 7px 2px 7px;
+   color: #fff;
+   text-decoration: none;
+   font-size: 20px;
+}
+
+img{
+  box-shadow: 2px 2px 3px #02010a;
+  width: 100%;
+}
+
+#imagencentral{
+  background-color: #82c3a6;
+  padding: 1% 2%;
+  box-sizing: border-box;
+}
+
+#imagensecundaria{
+  background-color: #d5c75f;
+  border: 1px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#imagenRetrato, #imagenPaisaje
+{
+	width: 50%;
+	padding: 25px;
+	box-sizing: border-box;
+	border: 1px;
+	text-align: center;
+}
+
+#imagenRetrato:hover{
+  transform: translate(20px, -5px);
+}
+
+#imagenPaisaje:hover{
+  transform: rotate(10deg);
+}
+
+.galeria{
+	background-color: #d5c75f !important;
+	display: flex !important;
+ 	flex-flow: row wrap !important;
+ 	box-sizing: border-box;
+}
+
+.galeria picture
+{
+  width: calc(100%/3);
+  padding: 20px 20px 20px 20px;
+  box-sizing: border-box;
+}
+
+.blur
+{
+  -webkit-filter:blur(10px)
+}
+.grayscale
+{
+  -webkit-filter:grayscale(100%)
+}
+.galeria picture:nth-child(2n)
+{
+  -webkit-filter:grayscale(100%)
+}
+.sepia
+{
+  -webkit-filter:sepia(90%)
+}
+
+#pie
+{
+	background-color: #C6d5c5;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	width: 900px;
+	margin: auto;
+	padding: 25px;
+	border-radius: 0 0 10px 10px ;
+}
+
+#pie ul
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#pie h3
+{
+	padding: 0;
+	margin: 0;
+}
+
+#pie  > div
+{
+	width: 25%;
+
+}
+
+.icon img
+{
+
+	border-radius: 5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	width: 25px;
+}
+
+.icon a
+{
+	text-decoration: none;
+	color: #000;
+
+}
+
+/*Animaciones*/
+@keyframes presentacion {
+    0% {margin-top: 150%;}
+    60% {margin-top: -5%;}
+    100% {margin-top: 0%;}
+}
+
+/*Media*/
+@media (max-width: 900px)
+{
+  #contenido,
+	#cabecera,
+  #imagencentral,
+  #imagenPaisaje,
+  #imagenRetrato,
+	#pie > div,
+	#cabecera > h1,
+	nav,
+	#menu,
+	#pie,
+  .galeria > picture,
+	#contenido > *
+	{
+		width: 100% !important;
+	}
+}
+
+.actual
+{
+	    border-bottom: 2px solid !important;
+}
